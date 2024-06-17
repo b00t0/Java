@@ -1,0 +1,12 @@
+log1.txt
+contentFolder.txt
+HW2Task1.java
+AlternatingChars.java
+task03.java
+log.txt
+task02.java
+HW2Task2.java
+text.txt
+log1.txt.lck
+task05.java
+task04.java

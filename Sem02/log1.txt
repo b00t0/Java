@@ -1,0 +1,2 @@
+июн. 17, 2024 11:38:58 AM task05 writeArrayToFile
+INFO: Succesfully recorded
