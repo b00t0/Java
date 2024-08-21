@@ -1,6 +1,8 @@
 package study_group.student;
 
-public class Student implements Comparable<Student>{
+import study_group.study_group.ItemStudyGroup;
+
+public class Student implements Comparable<Student>, ItemStudyGroup {
     private int id;
     private String name;
     private int age;
@@ -9,6 +11,10 @@ public class Student implements Comparable<Student>{
         this.id = id;
         this.name = name;
         this.age = age;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getAge() {

@@ -2,30 +2,31 @@ package study_group.study_group;
 
 import study_group.student.Student;
 import study_group.student.StudentComparatorByAge;
+import study_group.student.StudentComparatorByName;
 
 import java.util.*;
 
-public class StudyGroup implements Iterable<Student>{
-    private List<Student> students;
+public class StudyGroup<E extends ItemStudyGroup> implements Iterable<E>{
+    private List<E> students;
 
     public StudyGroup() {
         students = new ArrayList<>();
     }
 
-    public void addStudent(Student student){
+    public void addStudent(E student){
         students.add(student);
     }
 
     public void sortByName(){
-        Collections.sort(students);
+        students.sort(new StudentComparatorByName<>());
     }
 
     public void sortByAge(){
-        students.sort(new StudentComparatorByAge());
+        students.sort(new StudentComparatorByAge<>());
     }
 
     @Override
-    public Iterator<Student> iterator() {
-        return new StudentIterator(students);
+    public Iterator<E> iterator() {
+        return new StudentIterator<>(students);
     }
 }
